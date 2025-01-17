@@ -1,10 +1,17 @@
+import json
 
 
 class JsonSearch:
-    def __init__(self, json_data):
-        self.json_data = json_data
+    def __init__(self, json_file_name, sign_of_qr):
+        self.json_reading(json_file_name)
+        self.sign_of_qr = sign_of_qr
 
-    def jsond_search_all(self, key, data=None):
+    def json_reading(self, json_file_name):
+        with open(json_file_name, 'r', encoding='utf-8') as f:
+            data = json.load(f)
+        self.json_data = data
+
+    def json_search_by_key(self, key, data=None):
         if data is None:
             data = self.json_data
 
@@ -14,37 +21,60 @@ class JsonSearch:
                 if k == key:
                     results.append(v)
                 if isinstance(v, (dict, list)):
-                    results.extend(self.jsond_search_all(key, v))
+                    results.extend(self.json_search_by_key(key, v))
         elif isinstance(data, list):
             for item in data:
                 if isinstance(item, (dict, list)):
-                    results.extend(self.jsond_search_all(key, item))
+                    results.extend(self.json_search_by_key(key, item))
+        # print(results)
         return results
+
+    # def json_search_by_value(self, value, data=None):
+    #     """Поиск всех ключей по указанному значению."""
+    #     if data is None:
+    #         data = self.json_data
+    #
+    #     results = []
+    #     if isinstance(data, dict):
+    #         for k, v in data.items():
+    #             if v == value:
+    #                 results.append(k)
+    #             if isinstance(v, (dict, list)):
+    #                 results.extend(self.json_search_by_value(value, v))
+    #     elif isinstance(data, list):
+    #         for item in data:
+    #             if isinstance(item, (dict, list)):
+    #                 results.extend(self.json_search_by_value(value, item))
+    #     return results
+
+
+    def get_status(self, qr_list):
+        global new_json_data
+        qr_data_dic = {}
+
+        for qr_string in qr_list:
+            for item in self.json_data:
+                value = item['result'][self.sign_of_qr]
+                if value == qr_string:
+                    new_json_data = item
+                    qr_data = self.json_search_by_key('status', new_json_data)
+                    qr_data_dic[qr_string] = qr_data[0]
+        return qr_data_dic
+
 
 
 if __name__ == '__main__':
-    JSON = {
-        'a': 1,
-        'b': {
-            'c': 2,
-            'd': {
-                'e': 3,
-                'f': 'найдено',
-                'xxg': {4: 44, 'i': 'также_найдено 1'},
-            }
-        },
-        'список': [
-            {'g': 4},
-            {'h': 5, 'i': 'также_найдено 2'}
-        ]
-    }
+    # file = 'json_data/exsample.json'
+    file = 'json_data/answer1.json' # файл с json
+    sign_of_qr = 'cis'  # ключ индентификатора QR
 
-    jsonsearch = JsonSearch(JSON)
-    jsond_search = jsonsearch.jsond_search_all
+    qr_list = ["string-abracodabra_bla_bla_орпорпор", "ррлдорлоршгрлгрлорл"] # QRs
 
-    result1 = jsond_search('f')  # Вывод: ['найдено']
-    print(result1)
-    result2 = jsond_search('i')  # Вывод: ['также_найдено 2', 'также_найдено']
-    print(result2)
-    result3 = jsond_search('x')  # Вывод: []
-    print(result3)
+
+    jsonsearch = JsonSearch(file, sign_of_qr)
+    r = jsonsearch.get_status(qr_list)
+    print(r)
+
+
+
+

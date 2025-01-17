@@ -1,0 +1,64 @@
+[
+   {
+      "result":{
+         "requestedCis":"string",
+         "cis":"string-abracodabra_bla_bla_орпорпор",
+         "cisWithoutBrackets":"string",
+         "gtin":"string",
+         "producerInn":"string",
+         "status":"RETIRED",
+         "emissionDate":"2020-07-16T18:51:27.000Z",
+         "applicationDate":"2020-07-16T18:51:39.000Z",
+         "parent":"string",
+         "packageType":"UNIT",
+         "ownerInn":"string",
+         "tnVedEaesGroup":"string",
+         "tnVedEaes":"string",
+         "receiptDate":"2020-07-16T18:51:28.000Z",
+         "emissionType":"LOCAL",
+         "specialAttributes":{
+            "introducedDate":"2020-07-16T18:51:27.000Z",
+            "nextCis":[
+               "array[string]"
+            ],
+            "prevCis":[
+               "array[string]"
+            ],
+            "ftsDecisionCode":"string",
+            "eliminationReasonOther":"string",
+            "approvementDocument":{
+               "certDoc":[
+                  {
+                     "type":"CONFORMITY_CERTIFICATE",
+                     "number":"RU С-ХХ.АА00.B.00001/23",
+                     "date":"2023-01-01T00:00:00Z",
+                     "wellNumber":"string"
+                  },
+                  {
+                     "type":"CONFORMITY_DECLARATION",
+                     "number":"RU Д-ХХ.АА00.B.00001/23",
+                     "date":"2023-01-01T00:00:00Z",
+                     "wellNumber":"46246798"
+                  }
+               ],
+               "declarationDate":"11.08.2020",
+               "declarationRegNumber":"10000000/060820/0000000",
+               "declarationId":"string"
+            },
+            "productWeightGr": "string",
+            "isVarQuantity": true
+         },
+         "statusEx":"FTS_RESPOND_NOT_OK",
+         "productGroup":"water",
+         "productGroupId":13,
+         "extendedPackageType":"string",
+         "withdrawReason":"KM_SPOILED",
+         "licences":[
+            {
+               "licenceNumber":"string",
+               "licenceDate":"2021-09-06"
+            }
+         ]
+      }
+   }
+]

@@ -1,3 +1,4 @@
+import json
 
 
 class JsonSearch:
@@ -23,28 +24,17 @@ class JsonSearch:
 
 
 if __name__ == '__main__':
-    JSON = {
-        'a': 1,
-        'b': {
-            'c': 2,
-            'd': {
-                'e': 3,
-                'f': 'найдено',
-                'xxg': {4: 44, 'i': 'также_найдено 1'},
-            }
-        },
-        'список': [
-            {'g': 4},
-            {'h': 5, 'i': 'также_найдено 2'}
-        ]
-    }
+    # json_file_name = 'json_data/exsample.json'
+    json_file_name = 'json_data/answer1.json'
+    with open(json_file_name, 'r', encoding='utf-8') as f:
+        data = json.load(f)
 
-    jsonsearch = JsonSearch(JSON)
+    jsonsearch = JsonSearch(data)
     jsond_search = jsonsearch.jsond_search_all
 
-    result1 = jsond_search('f')  # Вывод: ['найдено']
-    print(result1)
-    result2 = jsond_search('i')  # Вывод: ['также_найдено 2', 'также_найдено']
+    # result1 = jsond_search('f')  # Вывод: ['найдено']
+    # print(result1)
+    result2 = jsond_search('cis')  # Вывод: ['также_найдено 2', 'также_найдено']
     print(result2)
-    result3 = jsond_search('x')  # Вывод: []
-    print(result3)
+    # result3 = jsond_search('x')  # Вывод: []
+    # print(result3)
