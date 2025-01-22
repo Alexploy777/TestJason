@@ -10,8 +10,11 @@ class JsonSearch:
 
     def json_reading(self, json_file_name):
         with open(json_file_name, 'r', encoding='utf-8') as f:
-            data = json.load(f)
-        self.json_data = data
+            json_data = json.load(f)
+            # correct_text = text.encode('latin1').decode('utf-8')
+            # correct_data = json.loads(correct_text)
+
+        self.json_data = json_data
 
     def json_search_by_key(self, key, data=None):
         if data is None:
@@ -36,7 +39,7 @@ class JsonSearch:
         qr_values_list = []
 
         for block in self.json_data:
-            key_block = block['result'][self.sign_of_qr]
+            key_block = block["result"][self.sign_of_qr]
             for sign_for_search in self.sign_for_search_list:
                 val = self.json_search_by_key(sign_for_search)
                 qr_values_list.append(val)
@@ -47,11 +50,9 @@ class JsonSearch:
 
 if __name__ == '__main__':
     file = 'json_data/answer1.json'  # файл с json
+    # file = 'json_data/answer1.json'
     sign_of_qr = 'cis'  # ключ индентификатора QR
-    sign_for_search_list = ["status", "receiptDate", "type", "number"]
-
-    qr_list = ["string-abracodabra_bla_bla_орпорпор", "ррлдорлоршгрлгрлорл"]  # QRs
-
+    sign_for_search_list = ["status", "errorMessage"]
     jsonsearch = JsonSearch(file, sign_of_qr, sign_for_search_list)
     result = jsonsearch.get_status_mod()
     for r in result:

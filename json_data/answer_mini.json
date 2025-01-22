@@ -1,0 +1,141 @@
+[{
+        "cisInfo": {
+            "requestedCis": "010290000063118221ZVHqaFg/WldCW",
+            "cis": "010290000063118221ZVHqaFg/WldCW",
+            "cisWithoutBrackets": "010290000063118221ZVHqaFg/WldCW",
+            "gtin": "",
+            "productGroup": null,
+            "packageType": null,
+            "generalPackageType": null
+        },
+        "errorMessage": "ÐÐ/ÐÐ Ð½Ðµ Ð½Ð°Ð¹Ð´ÐµÐ½",
+        "errorCode": "404"
+    }, {
+        "cisInfo": {
+            "requestedCis": "010290000063118221ZX/rQXMuDAU>t",
+            "cis": "010290000063118221ZX/rQXMuDAU>t",
+            "cisWithoutBrackets": "010290000063118221ZX/rQXMuDAU>t",
+            "gtin": "",
+            "productGroup": null,
+            "packageType": null,
+            "generalPackageType": null
+        },
+        "errorMessage": "ÐÐ/ÐÐ Ð½Ðµ Ð½Ð°Ð¹Ð´ÐµÐ½",
+        "errorCode": "404"
+    }, {
+        "cisInfo": {
+            "requestedCis": "010290000063118221zXs7gOLSqU1tS",
+            "cis": "010290000063118221zXs7gOLSqU1tS",
+            "cisWithoutBrackets": "010290000063118221zXs7gOLSqU1tS",
+            "gtin": "",
+            "productGroup": null,
+            "packageType": null,
+            "generalPackageType": null
+        },
+        "errorMessage": "ÐÐ/ÐÐ Ð½Ðµ Ð½Ð°Ð¹Ð´ÐµÐ½",
+        "errorCode": "404"
+    }, {
+        "cisInfo": {
+            "requestedCis": "010290000063118221zY1hCmBqpU5bj",
+            "cis": "010290000063118221zY1hCmBqpU5bj",
+            "cisWithoutBrackets": "010290000063118221zY1hCmBqpU5bj",
+            "gtin": "",
+            "productGroup": null,
+            "packageType": null,
+            "generalPackageType": null
+        },
+        "errorMessage": "ÐÐ/ÐÐ Ð½Ðµ Ð½Ð°Ð¹Ð´ÐµÐ½",
+        "errorCode": "404"
+    }, {
+        "cisInfo": {
+            "requestedCis": "010290000063119921sfuTCGFH5S4J4",
+            "cis": "010290000063119921sfuTCGFH5S4J4",
+            "cisWithoutBrackets": "010290000063119921sfuTCGFH5S4J4",
+            "gtin": "",
+            "productGroup": null,
+            "packageType": null,
+            "generalPackageType": null
+        },
+        "errorMessage": "ÐÐ/ÐÐ Ð½Ðµ Ð½Ð°Ð¹Ð´ÐµÐ½",
+        "errorCode": "404"
+    }, {
+        "cisInfo": {
+            "requestedCis": "010290000063119921VGIHTNNiqDaR6",
+            "cis": "010290000063119921VGIHTNNiqDaR6",
+            "cisWithoutBrackets": "010290000063119921VGIHTNNiqDaR6",
+            "gtin": "",
+            "productGroup": null,
+            "packageType": null,
+            "generalPackageType": null
+        },
+        "errorMessage": "ÐÐ/ÐÐ Ð½Ðµ Ð½Ð°Ð¹Ð´ÐµÐ½",
+        "errorCode": "404"
+    }, {
+        "cisInfo": {
+            "requestedCis": "010290000063119921VZFcavWqY7v5g",
+            "cis": "010290000063119921VZFcavWqY7v5g",
+            "cisWithoutBrackets": "010290000063119921VZFcavWqY7v5g",
+            "gtin": "",
+            "productGroup": null,
+            "packageType": null,
+            "generalPackageType": null
+        },
+        "errorMessage": "ÐÐ/ÐÐ Ð½Ðµ Ð½Ð°Ð¹Ð´ÐµÐ½",
+        "errorCode": "404"
+    }, {
+        "cisInfo": {
+            "applicationDate": "2020-12-16T12:22:36.175Z",
+            "introducedDate": "2020-12-16T12:27:30.666Z",
+            "turnoverType": "CONTRACT",
+            "isMultipleSales": false,
+            "requestedCis": "010290000221909821%,F)hH8lcaQzk",
+            "cis": "010290000221909821%,F)hH8lcaQzk",
+            "cisWithoutBrackets": "010290000221909821%,F)hH8lcaQzk",
+            "gtin": "02900002219098",
+            "tnVedEaesGroup": "62",
+            "productName": "ÐÐ´ÐµÐ¶Ð´Ð°. ÐÐµÐ· ÑÐ¾Ð²Ð°ÑÐ½Ð¾Ð³Ð¾ Ð·Ð½Ð°ÐºÐ°. ÐÑÐ¶ÑÐºÐ°Ñ. ÐÑÐ¾Ð¸Ð·Ð²ÐµÐ´ÐµÐ½ Ð² Ð Ð¤",
+            "productGroupId": 1,
+            "productGroup": "lp",
+            "brand": "ÐÐµÐ· ÑÐ¾Ð²Ð°ÑÐ½Ð¾Ð³Ð¾ Ð·Ð½Ð°ÐºÐ°",
+            "emissionDate": "2020-12-16T12:21:53.174Z",
+            "emissionType": "REMAINS",
+            "packageType": "UNIT",
+            "generalPackageType": "UNIT",
+            "ownerInn": "7743325139",
+            "ownerName": "ÐÐÐ \"ÐÐ ÐÐÐ\"",
+            "status": "INTRODUCED",
+            "statusEx": "EMPTY",
+            "child": [],
+            "producerInn": "7714858446",
+            "producerName": "ÐÐÐ \"ÐÐ ÐÐÐÐÐÐÐÐ¡Ð¢\"",
+            "markWithdraw": true
+        }
+    }, {
+        "cisInfo": {
+            "applicationDate": "2020-12-16T12:22:36.174Z",
+            "introducedDate": "2020-12-16T12:27:30.666Z",
+            "turnoverType": "CONTRACT",
+            "isMultipleSales": false,
+            "requestedCis": "010290000221909821)o4O:8uW3ePrn",
+            "cis": "010290000221909821)o4O:8uW3ePrn",
+            "cisWithoutBrackets": "010290000221909821)o4O:8uW3ePrn",
+            "gtin": "02900002219098",
+            "tnVedEaesGroup": "62",
+            "productName": "ÐÐ´ÐµÐ¶Ð´Ð°. ÐÐµÐ· ÑÐ¾Ð²Ð°ÑÐ½Ð¾Ð³Ð¾ Ð·Ð½Ð°ÐºÐ°. ÐÑÐ¶ÑÐºÐ°Ñ. ÐÑÐ¾Ð¸Ð·Ð²ÐµÐ´ÐµÐ½ Ð² Ð Ð¤",
+            "productGroupId": 1,
+            "productGroup": "lp",
+            "brand": "ÐÐµÐ· ÑÐ¾Ð²Ð°ÑÐ½Ð¾Ð³Ð¾ Ð·Ð½Ð°ÐºÐ°",
+            "emissionDate": "2020-12-16T12:21:53.174Z",
+            "emissionType": "REMAINS",
+            "packageType": "UNIT",
+            "generalPackageType": "UNIT",
+            "ownerInn": "7743325139",
+            "ownerName": "ÐÐÐ \"ÐÐ ÐÐÐ\"",
+            "status": "INTRODUCED",
+            "statusEx": "EMPTY",
+            "child": [],
+            "producerInn": "7714858446",
+            "producerName": "ÐÐÐ \"ÐÐ ÐÐÐÐÐÐÐÐ¡Ð¢\"",
+            "markWithdraw": true
+        }
+    }]
