@@ -53,5 +53,10 @@ if __name__ == '__main__':
     qr_list = ["string-abracodabra_bla_bla_орпорпор", "ррлдорлоршгрлгрлорл"]  # QRs
 
     jsonsearch = JsonSearch(file, sign_of_qr, sign_for_search_list)
-    r = jsonsearch.get_status_mod()
-    print(r)
+    result = jsonsearch.get_status_mod()
+    for r in result:
+        print(r)
+        print('-------------------------')
+        for item in result[r]:
+            print(item)
+        print('-------------------------')
