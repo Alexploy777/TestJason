@@ -32,7 +32,7 @@ if __name__ == '__main__':
     matches = big_json_by_blocks(file_path)
     # block_json_to_temp_file(matches)
     #
-    # with open(file_path, 'r', encoding='utf-8') as f:
+    # with open(input_file_path, 'r', encoding='utf-8') as f:
     #     json_data = json.load(f)
     #     print(json_data)
     #     print(type(json_data))

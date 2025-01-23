@@ -64,7 +64,7 @@ class JsonSearch:
 
 
 if __name__ == '__main__':
-    # file = 'json_data/exsample.json'
+    # input_file_path = 'json_data/exsample.json'
     file = 'json_data/answer1.json' # файл с json
     sign_of_qr = 'cis'  # ключ индентификатора QR
 

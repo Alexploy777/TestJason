@@ -50,7 +50,7 @@ class JsonSearch:
 
 if __name__ == '__main__':
     file = 'json_data/answer1.json'  # файл с json
-    # file = 'json_data/answer1.json'
+    # input_file_path = 'json_data/answer1.json'
     sign_of_qr = 'cis'  # ключ индентификатора QR
     sign_for_search_list = ["status", "errorMessage"]
     jsonsearch = JsonSearch(file, sign_of_qr, sign_for_search_list)

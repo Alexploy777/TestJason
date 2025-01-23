@@ -31,7 +31,7 @@ def process_large_json(file_path):
 
 
 if __name__ == '__main__':
-    # file = 'json_data/answer_mini.json'
+    # input_file_path = 'json_data/answer_mini.json'
     file = 'json_data/check_short.json'
     # Вызов функции
     qr_data_dic = process_large_json(file)
