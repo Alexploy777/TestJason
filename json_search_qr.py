@@ -44,7 +44,7 @@ class JsonSearch:
 
 
 if __name__ == '__main__':
-    # file = 'json_data/check_short2.txt'  # файл с json
+    # file = 'json_data/check_short.json'  # файл с json
     file = 'json_data/answer_mini.json'  # файл с json
     sign_of_qr = 'cis'  # ключ индентификатора QR
     sign_for_search_list = ["status", "errorMessage"]
