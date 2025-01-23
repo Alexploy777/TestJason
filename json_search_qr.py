@@ -10,20 +10,21 @@ class JsonSearch:
         self.sign_erors = sign_for_search_list[1]
 
     def json_reading(self, json_file_name):
-        with open(json_file_name, 'r', encoding='utf-8') as f:
-            text_data = f.read()
-            text_data = text_data.replace('][', ',')
-            json_data = json.loads(text_data)
-        self.json_data = json_data
+        try:
+            with open(json_file_name, 'r', encoding='utf-8') as f:
+                text_data = f.read()
+                text_data = text_data.replace('][', ',')
+                json_data = json.loads(text_data)
+            self.json_data = json_data
+        except Exception as e:
+            print(f'Произошла ошибка {e} чтения или обработки файла')
 
 
     def decoder(self, string):
         return string.encode('latin1').decode('utf-8')
 
     def get_status(self):
-        global new_json_data
         qr_data_dic = {}
-
         for block in self.json_data:
             dic_of_block = block["cisInfo"]
             requestedCis = dic_of_block[self.sign_of_qr]
@@ -31,7 +32,6 @@ class JsonSearch:
                 qr_data_dic[requestedCis] = dic_of_block[self.sign_status]
             else:
                 qr_data_dic[requestedCis] = self.decoder(block[self.sign_erors])
-
         self.qr_data_dic = qr_data_dic
         self.write_to_file()
         print('Обработка завершена!')
