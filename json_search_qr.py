@@ -13,7 +13,6 @@ class JsonSearch:
             text_data = f.read()
             text_data = text_data.replace('][', ',')
             json_data = json.loads(text_data)
-            # json_data = json.load(f)
         self.json_data = json_data
 
 
