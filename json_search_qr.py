@@ -10,7 +10,10 @@ class JsonSearch:
 
     def json_reading(self, json_file_name):
         with open(json_file_name, 'r', encoding='utf-8') as f:
-            json_data = json.load(f)
+            text_data = f.read()
+            text_data = text_data.replace('][', ',')
+            json_data = json.loads(text_data)
+            # json_data = json.load(f)
         self.json_data = json_data
 
 
@@ -21,7 +24,6 @@ class JsonSearch:
     def get_status_mod(self):
         global new_json_data
         qr_data_dic = {}
-        qr_values_list = []
 
         for block in self.json_data:
             dic_of_block = block["cisInfo"]
@@ -31,8 +33,6 @@ class JsonSearch:
             else:
                 qr_data_dic[requestedCis] = self.decoder(block['errorMessage'])
 
-        # print(qr_data_dic)
-        # return qr_data_dic
         self.qr_data_dic = qr_data_dic
         self.write_to_file()
 
@@ -44,8 +44,8 @@ class JsonSearch:
 
 
 if __name__ == '__main__':
-    # file = 'json_data/check_short2.txt'  # файл с json
-    file = 'json_data/answer_mini.json'  # файл с json
+    file = 'json_data/check_short.txt'  # файл с json
+    # file = 'json_data/answer_mini.json'  # файл с json
     sign_of_qr = 'cis'  # ключ индентификатора QR
     sign_for_search_list = ["status", "errorMessage"]
     jsonsearch = JsonSearch(file, sign_of_qr, sign_for_search_list)
