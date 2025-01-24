@@ -1,4 +1,8 @@
 import json
+import re
+
+import openpyxl
+from openpyxl.styles import NamedStyle
 
 
 class JsonSearch:
@@ -34,15 +38,49 @@ class JsonSearch:
                 qr_data_dic[requestedCis] = self.decoder(block[self.sign_erors])
         self.qr_data_dic = qr_data_dic
         self.write_to_file()
+        self.write_to_excel()
         print('Обработка завершена!')
 
     def write_to_file(self):
         with open('qr_data_result.json', 'w', encoding='utf-8') as f:
             json.dump(self.qr_data_dic, f, ensure_ascii=False, indent=0)
 
+    def write_to_excel(self):
+        # Создаем новую книгу Excel
+        wb = openpyxl.Workbook()
+        sheet = wb.active
+        sheet.title = "QR_check"
+
+        def sanitize_string(value):
+            if isinstance(value, str):
+                # Удаляем все символы, не входящие в допустимый диапазон
+                return re.sub(r"[\x00-\x1F\x7F-\x9F]", "", value)
+            return value
+
+        # Определяем стиль для текста
+        text_style = NamedStyle(name="text_style", number_format="@")
+        wb.add_named_style(text_style)
+
+        sheet.cell(row=1, column=1, value="QR").style = text_style  # Заголовок первого столбца
+        sheet.cell(row=1, column=2, value="Статус").style = text_style  # Заголовок второго столбца
+
+        for row, (key, value) in enumerate(self.qr_data_dic.items(), start=2):
+            sanitized_key = sanitize_string(key)  # Очищаем ключи
+            sanitized_value = sanitize_string(value)  # Очищаем значения
+            cell_key = sheet.cell(row=row, column=1, value=sanitized_key)
+            cell_value = sheet.cell(row=row, column=2, value=sanitized_value)
+            cell_key.style = text_style
+            cell_value.style = text_style
+
+        # Сохраняем в файл
+        wb.save("qr_check_excel.xlsx")
+        print("Словарь успешно записан в файл qr_check_excel.xlsx")
+
+
+
 
 if __name__ == '__main__':
-    input_file_path = 'json_data/check_short.txt'  # файл с json
+    input_file_path = 'json_data/check_short.json'  # файл с json
     # input_file_path = 'json_data/answer_mini.json'  # файл с json
     sign_of_qr = 'cis'  # ключ индентификатора QR
     sign_for_search_list = ["status", "errorMessage"]
